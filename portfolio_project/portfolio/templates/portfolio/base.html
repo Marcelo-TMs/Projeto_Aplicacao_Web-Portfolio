@@ -1,0 +1,75 @@
+<!-- HTML que outras páginas herdarão -->
+
+<!-- Carregamento da biblioteca estática do Django -->
+{% load static %}
+
+<!-- Declaração do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mosaicam{% endblock %}</title>
+
+    <!-- Link para o arquivo CSS personalizado e Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Ícone do site -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/Favicon.ico' %}" class="rounded-circle me-2">
+</head>
+<body>
+
+    <!-- Barra de navegação do site -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'listar_projetos' %}"><img src="{% static 'img/Mosaicam.png' %}" alt="Mosaicam Logo" id="mosaicam-logo"></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- Caso o usuário esteja logado -->
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'perfil_publico' user.username %}">Meu Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'criar_projeto' %}">Novo Projeto</a></li>
+                        <form method="post" action="{% url 'logout' %}" id="sair-form">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link nav-link" id="sair-botao">
+                                Sair
+                            </button>
+                        </form>
+
+                    <!-- Caso o usuário não esteja logado -->
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}" align="right">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Cadastro</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ao ter sucesso no cadastro de usuário e na criação/edição/exclusão de
+         projetos. Alguns feedbacks irão aparecer -->
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Container que armazenará o conteúdo principal de cada página HMTL -->
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer do site -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Mosaicam - Todos os direitos reservados</p>
+
+        <!-- Hyperlink para a página "Sobre a equipe" -->
+        <p><a href="{% url 'sobre' %}" class="text-white">Sobre a equipe</a></p>
+    </footer>
+</body>
+</html>

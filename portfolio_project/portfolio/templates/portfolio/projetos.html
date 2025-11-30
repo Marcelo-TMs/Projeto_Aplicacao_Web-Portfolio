@@ -1,0 +1,83 @@
+<!-- HTML "index" que é acessada após o login e que dá acesso aos projetos
+     recentes de cada usuário -->
+
+<!-- projetos.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+<!-- Título da projetos.html -->
+{% block title %}Mosaicam{% endblock %}
+
+<!-- Começo do conteúdo principal da projetos.html -->
+{% block content %}
+<h2 align="center">Veja os mais novos projetos recentes:</h2>
+<br/>
+
+<!-- Estrutura em grade para exibir os projetos -->
+<div class="row">
+    {% for projeto in projetos %}
+        <div class="col-md-4">
+            <div class="card mb-3">
+
+                <!-- Caso o projeto possua imagem, ela será apresentada -->
+                {% if projeto.imagem %}
+                    <img src="{{ projeto.imagem.url }}" class="card-img-top" alt="{{ projeto.titulo }}">
+                {% endif %}
+
+                <!-- Corpo do cartão do projeto. Contém título, usuário e descrição -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ projeto.titulo }}</h5>
+
+                    <div class="d-flex align-items-center mb-2">
+
+                        <!-- Mostrará o ícone do usuário como um hyperlink
+                             clicável que redireciona para sua página de perfil -->
+                        {% if projeto.usuario.perfil.imagem_perfil %}
+                            <a href="{% url 'perfil_publico' projeto.usuario.username %}">
+                                <img src="{{ projeto.usuario.perfil.imagem_perfil.url }}" 
+                                     class="rounded-circle me-2" 
+                                     id="img-projetos"
+                                     alt="{{ projeto.usuario.username }}">
+                            </a>
+
+                        <!-- Caso o usuário não tenha escolhido uma foto de
+                             perfil, um ícone genérico o representará -->
+                        {% else %}
+                            <a href="{% url 'perfil_publico' projeto.usuario.username %}">
+                                <img src="{% static 'img/user.png' %}" 
+                                     class="rounded-circle me-2" 
+                                     id="img-projetos"
+                                     alt="{{ projeto.usuario.username }}">
+                            </a>
+                        {% endif %}
+
+                        <!-- Hyperlink de nome de usuário que redireciona para
+                             a página de perfil do usuário que criou o projeto -->
+                        <a href="{% url 'perfil_publico' projeto.usuario.username %}" id="username-projetos">
+                            <span>{{ projeto.usuario.username }}</span>
+                        </a>
+                    </div>
+
+                    <!-- Descrição do projeto, limitada a 20 palavras -->
+                    <p class="card-text">{{ projeto.descricao|truncatewords:20 }}</p>
+
+                    <!-- Botões para ver mais detalhes do projeto ou acessar o
+                         link do projeto (se disponível) -->
+                    <a href="{% url 'detalhe_projeto' projeto.id %}" class="btn btn-primary">Detalhes</a>
+
+                    {% if projeto.link %}
+                        <a href="{{ projeto.link }}" class="btn btn-primary" target="_blank">Acessar o projeto</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% empty %}
+
+        <!-- Mensagem exibida caso não haja projetos cadastrados por nenhum
+             usuário -->
+        <p>Nenhum projeto cadastrado ainda.</p>
+    {% endfor %}
+</div>
+
+<!-- Fim do conteúdo principal da projetos.html -->
+{% endblock %}

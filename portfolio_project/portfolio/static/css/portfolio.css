@@ -1,0 +1,155 @@
+/* Estilos para o base.html */
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+body{
+    margin: 0;
+    padding-bottom: 80px; /* Espaço reservado para o footer */
+}
+
+footer{
+    position: absolute;
+    bottom: -50px; /* Posiciona o footer na parte inferior */
+    width: 100%;
+    height: 115px; /* Altura do footer */
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#mosaicam-logo{
+    width: 70px;
+    height: 50px;
+}
+
+#sair-form{ display: inline; }
+
+#sair-botao{
+    display: inline;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Estilos para o login.html */
+#div-login{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 110px;
+}
+
+#login-form{
+    width: 300px;
+    margin-top: 30px;   
+}
+
+/* Estilos para o signup.html */
+#h2-signup{
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#signup-form{ margin-top: 30px; }
+
+/* Estilos para o detalhe_projeto.html */
+#h5-detalhe_projeto{ margin-top: 15px; }
+
+#img-detalhe_projeto{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#imagem-detalhe_projeto{
+    margin-top:10px;
+    width: 500px;
+}
+
+/* Estilos para o perfil.html */
+#h2-perfil{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#github-img_style, #linkedin-img_style{
+    width: 35px;
+    height: 35px;
+}
+
+#linkedin-style{ text-decoration: none; }
+
+#h3-perfil{ margin-bottom: 20px; }
+
+/* Estilo para o projetos_form.html */
+#salvar-projetos_form{ margin-bottom: 10px; }
+
+/* Estilos para o projetos.html */
+#img-projetos{
+    width: 40px;
+    height: 40px;
+}
+
+#username-detalhe_projeto, #github-style, #username-projetos{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para o sobre.html */
+#h2-sobre{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#p-sobre{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+#div-img_desenvolvedores{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin-left:180px;
+    margin-top: 20px;
+}
+
+#img_desenvolvedores{
+    width: 200px;
+    height: 200px;
+}
+
+#div-nome_desenvolvedores{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-left: 162px;
+    margin-top: 15px;
+}
+
+#h3-nome_sabrina{ margin-left: 25px; }
+
+#h3-nome_marcelo{ margin-left: -5px; }
+
+#div-github-sobre{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#div-linkedin-sobre{
+    display: flex;
+    align-items: center;
+    gap: -15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 186px;
+}

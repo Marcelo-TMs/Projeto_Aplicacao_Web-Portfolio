@@ -1,0 +1,29 @@
+<!-- HTML para realização de cadastro de usuário -->
+
+<!-- signup.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+
+<!-- Título da signup.html -->
+{% block title %}Cadastro{% endblock %}
+
+<!-- Começo do conteúdo principal da signup.html -->
+{% block content %}
+
+<h2 id="h2-signup">Novo(a) por aqui?</h2>
+
+<!-- Estrutura do formulário para cadastro de usuário -->
+<form method="post" id="signup-form">
+
+    <!-- Token CSRF de segurança para evitar ataques -->
+    {% csrf_token %}
+
+    <!-- Estrutura que renderiza o formulário em uma série de parágrafos
+         (<p>) -->
+    {{ form.as_p }}
+
+    <!-- Botão para envio dos dados do formulário -->
+    <button type="submit" class="btn btn-success">Realizar Cadastro</button>
+</form>
+
+<!-- Fim do conteúdo principal da signup.html -->
+{% endblock %}

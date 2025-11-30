@@ -1,0 +1,31 @@
+<!-- HTML para transformar a forms.py acessível tanto para edição do projeto
+     quanto para criação de um novo projeto -->
+
+<!-- projetos_form.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+
+<!-- Título da projetos_form.html -->
+{% block title %}Projeto{% endblock %}
+
+<!-- Começo do conteúdo principal da projetos_form.html -->
+{% block content %}
+
+<!-- Texto da página mudará dependendo da escolha do usuário -->
+<h2 margin-bottom="20px">{% if form.instance.pk %}Editar Projeto{% else %}Novo Projeto{% endif %}</h2>
+
+<!-- Estrutura do formulário para criação/edição de projeto -->
+<form method="post" enctype="multipart/form-data">
+
+    <!-- Token CSRF de segurança para evitar ataques -->
+    {% csrf_token %}
+
+    <!-- Estrutura que renderiza o formulário em uma série de parágrafos
+         (<p>) -->
+    {{ form.as_p }}
+
+    <!-- Botão para salvar as alterações feitas no formulário -->
+    <button type="submit" class="btn btn-success" id="salvar-projetos_form">Salvar</button>
+</form>
+
+<!-- Fim do conteúdo principal da projetos_form.html -->
+{% endblock %}

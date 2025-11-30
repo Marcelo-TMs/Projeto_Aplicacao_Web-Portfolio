@@ -1,0 +1,35 @@
+<!-- HTML para edição das infomarções do perfil público do usuário -->
+
+<!-- form.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+
+<!-- Título da form.html -->
+{% block title %}Editar Perfil{% endblock %}
+
+<!-- Começo do conteúdo principal da form.html -->
+{% block content %}
+<h2>Editar Perfil</h2>
+
+<!-- Estrutura do formulário para edição das informações do usuário --> 
+<form method="post" enctype="multipart/form-data">
+
+    <!-- Token CSRF de segurança para evitar ataques -->
+    {% csrf_token %}
+    <h4>Informações de Usuário</h4>
+
+    <!-- Estrutura de formulário que acessa o método "user_form" em views.py e
+         renderiza o formulário em uma série de parágrafos (<p>) -->
+    {{ user_form.as_p }}
+
+    <h4>Informações de Perfil</h4>
+
+    <!-- Estrutura de formulário que acessa o método "perfil_form" em views.py e
+         renderiza o formulário em uma série de parágrafos (<p>) -->
+    {{ perfil_form.as_p }}
+
+    <!-- Botão para salvar as alterações feitas no formulário -->
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+
+<!-- Fim do conteúdo principal da form.html -->
+{% endblock %}

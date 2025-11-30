@@ -1,0 +1,62 @@
+<!-- HTML utilizando ao clicar no "Ver mais" em um projeto -->
+
+<!-- detalhe_projeto.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+
+<!-- Título da detalhe_perfil.html -->
+{% block title %}{{ projeto.titulo }}{% endblock %}
+
+<!-- Começo do conteúdo principal da detalhe_perfil.html -->
+{% block content %}
+
+<!-- Hyperlink que redimenciona o usuário novamente para a página principal -->
+<h6><a href="{% url 'listar_projetos' %}">Início</a></h6>
+
+<!-- Exibição das informações do projeto e de quem o realizou -->
+<h5 id="#h5-detalhe_projeto">Projeto feito por: 
+
+    <!-- Caso o usuário tenha uma imagem de perfil que ele mesmo definiu,
+         essa imagem será usada para o referenciar -->
+    {% if projeto.usuario.perfil.imagem_perfil %}
+        <a href="{% url 'perfil_publico' projeto.usuario.username %}">
+            <img src="{{ projeto.usuario.perfil.imagem_perfil.url }}" 
+                class="rounded-circle me-2"
+                id="img-detalhe_projeto"
+                alt="{{ projeto.usuario.username }}">
+        </a>
+
+    <!-- Caso contrário, uma imagem de perfil genérica será atribuída a ele
+         OBS: Tanto a imagem definida, quanto a genérica serão um Hyperlink
+         que redireciona o usuário ao perfil de quem publicou o projeto -->
+    {% else %}
+        <a href="{% url 'perfil_publico' projeto.usuario.username %}">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" 
+                class="rounded-circle me-2"
+                id="img-detalhe_projeto"
+                alt="{{ projeto.usuario.username }}">
+        </a>
+    {% endif %}
+
+    <!-- Hyperlink com o nome do autor do projeto que redireciona
+         para a mesma página que o Hyperlink da imagem -->
+    <a href="{% url 'perfil_publico' projeto.usuario.username %}" id="username-detalhe_projeto">
+        <span>{{ projeto.usuario.username }}</span>
+    </a>
+</h5>
+
+<!-- Caso o projeto possua uma imagem definida pelo usuário, essa imagem será
+     exibida -->
+{% if projeto.imagem %}
+    <img src="{{ projeto.imagem.url }}" class="img-fluid mb-3" id="imagem-detalhe_projeto" alt="{{ projeto.titulo }}">
+{% endif %}
+
+<!-- Exibição do título, descrição e link do projeto (caso tenha) -->
+<h2>{{ projeto.titulo }}</h2>
+<p>{{ projeto.descricao }}</p>
+
+{% if projeto.link %}
+    <a href="{{ projeto.link }}" target="_blank">Acessar o projeto</a>
+{% endif %}
+
+<!-- Fim do conteúdo principal da detalhe_projeto.html -->
+{% endblock %}

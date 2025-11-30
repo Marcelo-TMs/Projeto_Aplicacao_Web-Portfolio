@@ -1,0 +1,109 @@
+<!-- HTML para mostrar o perfil público do usuário -->
+
+<!-- perfil.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+<!-- Título da perfil.html -->
+{% block title %}Perfil{% endblock %}
+
+<!-- Começo do conteúdo principal da perfil.html -->
+{% block content %}
+
+<!-- Se a página de perfil pertence ao usuário logado, a opção de
+     "Editar Perfil" aparecerá -->
+{% if request.user == perfil.usuario %}
+    <h6 align="right"><a class="edit-link" href="{% url 'editar_perfil' %}">Editar Perfil</a></h6>
+{% endif %}
+
+<!-- Se o perfil contém uma imagem, essa imagem referente ao perfil será buscada -->
+{% if perfil.imagem_perfil %}
+    <img src="{{ perfil.imagem_perfil.url }}" width="150" class="rounded-circle me-2" alt="{{ perfil.usuario.username }}">
+
+<!-- Caso contrário, uma imagem genérica será exibida -->
+{% else %}
+    <img src="{% static 'img/user.png' %}" width="150" class="rounded-circle me-2" alt="Imagem padrão">
+{% endif %}
+
+<!-- Nome de perfil do usuário -->
+<h2 id="h2-perfil">{{ perfil.usuario.username }}</h2>
+
+<!-- Verifica se o campo de biografia e habilidades do usuário contém informações.
+     Caso não tenha nada, outras informações serão inseridas -->
+<p><strong>Bio:</strong>
+    {% if perfil.bio %}
+        {{ perfil.bio }}</p>
+    {% else %}
+        O usuário ainda não adicionou uma bio.</p>
+    {% endif %}
+
+<p><strong>Habilidades:</strong>
+    {% if perfil.bio %}
+        {{ perfil.habilidades }}</p>
+    {% else %}
+        O usuário ainda não adicionou suas habilidades.</p>
+    {% endif %}
+
+<!-- Links para o LinkedIn e GitHub do usuário, caso existam -->
+ {% if perfil.github %}
+    <p><a href="{{ perfil.github }}" id="github-style" target="_blank">
+        <img src="{% static 'img/GitHub.png'%}" id="github-img_style">
+        <i class="bi bi-github"></i> <strong>GitHub</strong>
+    </a></p>
+{% endif %}
+
+{% if perfil.linkedin %}
+    <p><a href="{{ perfil.linkedin }}" id="linkedin-style" target="_blank">
+        <img src="{% static 'img/LinkedIn.png'%}" id="linkedin-img_style">
+        <i class="bi bi-linkedin"></i> <strong>LinkedIn</strong>
+    </a></p>
+{% endif %}
+
+<hr>
+<!-- O texto dos projetos do usuário mudará caso ele esteja logado e o perfil
+     pertença a ele -->
+{% if request.user == perfil.usuario %}
+    <h3 id="h3-perfil">Meus Projetos</h3>
+{% else %}
+    <h3 id="h3-perfil">Projetos</h3>
+{% endif %}
+
+<!-- Exibição dos projetos enviados pelo usuário -->
+<div class="row">
+    {% for projeto in projetos %}
+        <div class="col-md-4">
+            <div class="card mb-3">
+
+                <!-- Caso o projeto possua uma imagem -->
+                {% if projeto.imagem %}
+                    <img src="{{ projeto.imagem.url }}" class="card-img-top" alt="{{ projeto.titulo }}">
+                {% endif %}
+
+                <!-- Corpo do card do projeto -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ projeto.titulo }}</h5>
+
+                    <!-- A linha de descrição contém truncatewords(limite) de
+                         20 caracteres, foi criado o botão "Ver mais" que
+                         redireciona para o detalhe_projeto.html -->
+                    <p class="card-text">{{ projeto.descricao|truncatewords:20 }}</p>
+                    <a href="{% url 'detalhe_projeto' projeto.id %}" class="btn btn-primary">Ver mais</a>
+
+                    <!-- Botões de editar e excluir projeto só aparecem
+                         se o projeto pertence ao usuário logado -->
+                    {% if request.user == projeto.usuario %}
+                        <a href="{% url 'editar_projeto' projeto.id %}" class="btn btn-warning">Editar</a>
+                        <a href="{% url 'excluir_projeto' projeto.id %}" class="btn btn-danger">Excluir</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    <!-- Texto será mostrado caso o usuário não tenha postado nenhum projeto -->
+    {% empty %}
+        <p>Você ainda não cadastrou projetos.</p>
+    {% endfor %}
+</div>
+
+<!-- Fim do conteúdo principal da perfil.html -->
+{% endblock %}

@@ -1,0 +1,67 @@
+<!-- HTML contendo informações sobre a equipe de desenvolvimento -->
+
+<!-- sobre.html recebe as mesmas propriedades da base.html -->
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+<!-- Título da sobre.html -->
+{% block title %}Sobre a equipe{% endblock %}
+
+<!-- Começo do conteúdo principal da sobre.html -->
+{% block content %}
+<!-- Título e parágrafo introdutório sobre a equipe -->
+<h2 id="h2-sobre">Sobre a equipe</h2>
+<p id="p-sobre">Esse projeto foi desenvolvido pela equipe Mosaicam.</p>
+
+<!-- Fotos dos integrantes da equipe -->
+<div id="div-img_desenvolvedores">
+        <img src="{% static 'img/Wania.jpg' %}" 
+             class="rounded-circle me-2" 
+             id="img_desenvolvedores"
+             alt="Integrante Wânia Oliveira">
+        <img src="{% static 'img/Sabrina.jpg' %}" 
+             class="rounded-circle me-2" 
+             id="img_desenvolvedores"
+             alt="Integrante Sabrina Cristina">
+        <img src="{% static 'img/Marcelo.jpg' %}" 
+             class="rounded-circle me-2"
+             id="img_desenvolvedores"
+             alt="Integrante Marcelo de Souza">
+</div>
+
+<!-- Nomes dos integrantes da equipe -->
+<div id="div-nome_desenvolvedores">
+        <h3>Wânia Oliveira</h3>
+
+        <h3 id="h3-nome_sabrina">Sabrina Cristina</h3>
+
+        <h3 id="h3-nome_marcelo">Marcelo de Souza</h3>
+    </list>
+</div>
+
+<!-- Links para GitHub e LinkedIn dos integrantes da equipe -->
+<div id="div-github-sobre">
+        <img src="{% static 'img/GitHub.png'%}" id="github-img_style" style="margin-left:205px;"><a href="https://github.com/WaniaOliveira" id="github-style" target="_blank"><h4><strong>GitHub</strong></h4></a>
+        <img src="{% static 'img/GitHub.png'%}" id="github-img_style" style="margin-left:204px;"><a href="https://github.com/Sabrinacristinadev" id="github-style" target="_blank"><h4><strong>GitHub</strong></h4></a>
+        <img src="{% static 'img/GitHub.png'%}" id="github-img_style" style="margin-left: 205px;"><a href="https://github.com/Marcelo-TMs" id="github-style" target="_blank"><h4><strong>GitHub</strong></h4></a>
+</div>
+
+<div id="div-linkedin-sobre">
+    <img src="{% static 'img/LinkedIn.png'%}" 
+                                     class="rounded-circle me-2" 
+                                     id="linkedin-img_style"
+                                     alt="Link para o GitHub"><a href="https://www.linkedin.com/in/wania-oliveira-63b2a323a/" style="text-decoration: none;" target="_blank"><h4><strong>LinkendIn</strong></h4></a>
+        <img src="{% static 'img/LinkedIn.png'%}" 
+                                     class="rounded-circle me-2" 
+                                     id="linkedin-img_style"
+                                     style="margin-left: 178px;"
+                                     alt="Link para o GitHub"><a href="https://www.linkedin.com/in/sabrina-ilha-8b5168172/" id="linkedin-style" target="_blank"><h4><strong>LinkendIn</strong></h4></a>
+        <img src="{% static 'img/LinkedIn.png'%}" 
+                                     class="rounded-circle me-2" 
+                                     id="linkedin-img_style"
+                                     style="margin-left: 178px;"
+                                     alt="Link para o GitHub"><a href="https://www.linkedin.com/in/marcelo-de-souza-b4110b326/" id="linkedin-style" target="_blank"><h4><strong>LinkendIn</strong></h4></a>
+</div>
+
+<!-- Fim do conteúdo principal da sobre.html -->
+{% endblock %}
