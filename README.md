@@ -3,7 +3,7 @@ Aplicação web feita com HTML, Python e Django que lhe permite criar um portfó
 
 # Como fazer esse projeto funcionar?
 
-1. Baixe e descompacte o arquivo zip e abra ele em sua IDE (recomendamos o VS Code).
+1. Baixe e descompacte o arquivo zip e abra a pasta raiz "portfolio_project" em sua IDE (recomendamos o VS Code).
 2. Execute no terminal "python -m venv venv" para criar a pasta "venv" no projeto.
 3. Execute no terminal "venv/Scripts/activate" para ativar o venv.
 4. Execute em seguida "pip install django".
