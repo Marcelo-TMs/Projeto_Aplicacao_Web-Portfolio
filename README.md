@@ -13,3 +13,15 @@ Aplicação web feita com HTML, Python e Django que lhe permite criar um portfó
 8. Acesse a url do terminal.
 
 Aproveite! ;-)
+
+# Desenvolvedores responsáveis
+
+Projeto desenvolvido por:
+
+Wânia Oliveira
+Github da Wânia: https://github.com/WaniaOliveira
+
+Sabrina Cristina
+GitHub da Sabrina: https://github.com/Sabrinacristinadev
+
+Marcelo de Souza
