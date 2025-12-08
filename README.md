@@ -1,6 +1,6 @@
 # Projeto_Aplicacao_Web-Portfolio
 
-Aplicação web feita com HTML, Python e Django que lhe permite criar um portfólio próprio para apresentação de projetos realizados. Também é possível realizar login e cadastro de usuários, criar/editar/excluir projetos e personalização de perfil.
+Aplicação web construída com HTML, CSS, Python e Django que permite criar um portfólio próprio para apresentação de projetos realizados. Na solução, é possível realizar login e cadastro de usuários, criar/editar/excluir projetos e personalização de perfil (CRUD).
 
 # Como fazer esse projeto funcionar?
 
@@ -17,10 +17,8 @@ Aproveite! ;-)
 
 # Desenvolvedores responsáveis
 
-Projeto desenvolvido por:
-
 Wânia Oliveira || Github da Wânia: https://github.com/WaniaOliveira
 
 Sabrina Cristina || GitHub da Sabrina: https://github.com/Sabrinacristinadev
 
-Marcelo de Souza
+Marcelo de Souza || GitHub do Marcelo: https://github.com/Marcelo-TMs
