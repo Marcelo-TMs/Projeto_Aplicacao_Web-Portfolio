@@ -113,43 +113,56 @@ footer{
     margin-bottom: 35px;
 }
 
-#div-img_desenvolvedores{
+/* Container com 3 colunas para apresentação dos desenvolvedores */
+#div-desenvolvedores-container{
     display: flex;
-    align-items: center;
-    gap: 150px;
-    margin-left:180px;
-    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 40px 20px;
+    gap: 30px;
 }
 
-#img_desenvolvedores{
+/* Card individual */
+.desenvolvedor-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 280px;
+}
+
+.img-desenvolvedor{
     width: 200px;
     height: 200px;
 }
 
-#div-nome_desenvolvedores{
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    margin-left: 162px;
-    margin-top: 15px;
+/* Nome do desenvolvedor */
+.desenvolvedor-card h3{
+    margin: 10px 0 25px 0;
+    font-size: 1.3em;
 }
 
-#h3-nome_sabrina{ margin-left: 25px; }
-
-#h3-nome_marcelo{ margin-left: -5px; }
-
-#div-github-sobre{
+.links-container{
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-#div-linkedin-sobre{
-    display: flex;
-    align-items: center;
-    gap: -15px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 186px;
+.icon-social{
+    width: 35px;
+    height: 35px;
+}
+
+/* Para os links de GitHub e, principalmente, LinkedIn */
+.desenvolvedor-card a{
+    text-decoration: none;
+    color: #0077B5;
+}
+
+.desenvolvedor-card a h4{
+    margin: 0;
+    font-weight: bold;
 }
