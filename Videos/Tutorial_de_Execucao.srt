@@ -1,0 +1,414 @@
+1
+00:00:00,000 --> 00:00:01,448
+Olá devs!
+
+2
+00:00:01,448 --> 00:00:03,348
+Olá devs!
+Sejam bem-vindos(as) ao tutorial de
+
+3
+00:00:03,348 --> 00:00:06,201
+Sejam bem-vindos(as) ao tutorial de
+execução do projeto de aplicação web
+
+4
+00:00:06,201 --> 00:00:08,175
+execução do projeto de aplicação web
+de portfólio "Mosaicam".
+
+5
+00:00:08,175 --> 00:00:09,810
+de portfólio "Mosaicam".
+Meu nome é Marcelo de Souza,
+
+6
+00:00:09,810 --> 00:00:11,935
+Meu nome é Marcelo de Souza,
+um dos desenvolvedores do projeto.
+
+7
+00:00:11,935 --> 00:00:13,922
+um dos desenvolvedores do projeto.
+Estou aqui para ensinar a vocês
+
+8
+00:00:13,922 --> 00:00:16,169
+Estou aqui para ensinar a vocês
+como executar essa aplicação web
+
+9
+00:00:16,169 --> 00:00:18,572
+como executar essa aplicação web
+de portfólio em seu computador.
+
+10
+00:00:18,572 --> 00:00:20,363
+de portfólio em seu computador.
+Primeiramente, você tem que estar na
+
+11
+00:00:20,363 --> 00:00:23,139
+Primeiramente, você tem que estar na
+página principal do repositório
+
+12
+00:00:23,139 --> 00:00:25,032
+página principal do repositório
+"Projeto_Aplicacao_Web",
+
+13
+00:00:25,032 --> 00:00:29,488
+"Projeto_Aplicacao_Web",
+vai clicar em "Code" e realizar o
+
+15
+00:00:29,488 --> 00:00:31,992
+download do zip.
+Com o download concluído, você vai entrar
+
+16
+00:00:31,992 --> 00:00:34,267
+Com o download concluído, você vai entrar
+no "Gerenciador de Arquivos",
+
+17
+00:00:34,267 --> 00:00:36,709
+no "Gerenciador de Arquivos",
+vai encontrar a pasta zipada e
+
+18
+00:00:36,709 --> 00:00:38,260
+vai encontrar a pasta zipada e
+vai extrair esse arquivo.
+
+19
+00:00:38,260 --> 00:00:41,832
+vai extrair esse arquivo.
+Com o projeto extraído, você vai entrar
+
+20
+00:00:41,832 --> 00:00:45,367
+Com o projeto extraído, você vai entrar
+na pasta "portfolio_project" e
+
+21
+00:00:45,367 --> 00:00:47,857
+na pasta "portfolio_project" e
+vai abrir ela na sua IDE.
+
+22
+00:00:47,857 --> 00:00:50,371
+vai abrir ela na sua IDE.
+Estou utilizando o VS Code, vou abrir a
+
+23
+00:00:50,371 --> 00:00:54,340
+Estou utilizando o VS Code, vou abrir a
+pasta pelo terminal com o comando
+
+24
+00:00:54,340 --> 00:01:01,999
+pasta pelo terminal com o comando
+"Code ." e o VS Code será aberto.
+
+25
+00:01:01,999 --> 00:01:08,134
+"Code ." e o VS Code será aberto.
+Pode ver que aqui, temos as mesmas
+
+26
+00:01:08,134 --> 00:01:09,983
+Pode ver que aqui, temos as mesmas
+pastas que estão no projeto.
+
+27
+00:01:09,983 --> 00:01:12,315
+pastas que estão no projeto.
+Você também poderia abrir pela aba "File",
+
+28
+00:01:12,315 --> 00:01:17,653
+Você também poderia abrir pela aba "File",
+em "Open Folder...", entrando na pasta e
+
+29
+00:01:17,653 --> 00:01:20,456
+em "Open Folder...", entrando na pasta e
+clicando em "Select Folder",
+
+30
+00:01:20,456 --> 00:01:21,418
+clicando em "Select Folder",
+já que essas são as pastas necessárias
+
+31
+00:01:21,418 --> 00:01:23,042
+já que essas são as pastas necessárias
+para a execução do projeto.
+
+32
+00:01:23,042 --> 00:01:27,831
+para a execução do projeto.
+Também é importante ter extensões Python,
+
+33
+00:01:27,831 --> 00:01:29,578
+Também é importante ter extensões Python,
+principalmente as de "debug" para
+
+34
+00:01:29,578 --> 00:01:31,108
+principalmente as de "debug" para
+o funcionamento da aplicação.
+
+35
+00:01:31,108 --> 00:01:33,711
+o funcionamento da aplicação.
+E agora, eu seguirei o passo a passo
+
+36
+00:01:33,711 --> 00:01:37,690
+E agora, eu seguirei o passo a passo
+descrito no "Readme" do projeto,
+
+37
+00:01:37,690 --> 00:01:39,608
+descrito no "Readme" do projeto,
+para mostrar como os procedimentos
+
+38
+00:01:39,608 --> 00:01:43,079
+para mostrar como os procedimentos
+podem ser realizados com o texto
+
+39
+00:01:43,079 --> 00:01:45,045
+podem ser realizados apenas com o texto
+disponibilizado no "Readme".
+
+40
+00:01:45,045 --> 00:01:47,758
+disponibilizado no "Readme".
+Concluímos a 1° parte, onde baixamos e
+
+41
+00:01:47,758 --> 00:01:49,027
+Concluímos a 1° parte, onde baixamos e
+descompactamos o arquivo zip e
+
+42
+00:01:49,027 --> 00:01:53,923
+descompactamos o arquivo zip e
+abrirmos a pasta na IDE.
+
+43
+00:01:53,923 --> 00:01:58,488
+abrirmos a pasta na IDE.
+Agora, vamos executar "python -m venv venv"
+
+44
+00:01:58,488 --> 00:02:01,463
+Agora, vamos executar "python -m venv venv"
+para criar a pasta "venv" no projeto.
+
+45
+00:02:01,463 --> 00:02:03,731
+para criar a pasta "venv" no projeto.
+Control + ' (aspas simples) para abrir o
+
+46
+00:02:03,731 --> 00:02:04,542
+Control + ' (aspas simples) para abrir o
+terminal.
+
+47
+00:02:04,542 --> 00:02:06,086
+Control + ' (aspas simples) para abrir o
+terminal e você vai colar o comando
+
+48
+00:02:06,086 --> 00:02:07,273
+terminal e você vai colar o comando
+no terminal.
+
+49
+00:02:07,273 --> 00:02:14,509
+Veja que apareceu a pasta "venv",
+enquanto sua criação está sendo concluída
+
+50
+00:02:14,509 --> 00:02:20,240
+enquanto sua criação está sendo concluída
+vamos copiar o comando "venv/Scripts/activate".
+
+51
+00:02:22,176 --> 00:02:24,764
+Vejam que existe um "(venv)" ao lado,
+
+52
+00:02:24,764 --> 00:02:28,991
+Vejam que existe um "(venv)" ao lado,
+agora vamos executar "pip install django",
+
+53
+00:02:28,991 --> 00:02:31,028
+agora vamos executar "pip install django",
+para instalar o Django.
+
+54
+00:02:31,028 --> 00:02:34,990
+para instalar o Django.
+Enquanto estiver instalando, vamos copiar
+
+55
+00:02:34,990 --> 00:02:39,391
+Enquanto estiver instalando, vamos copiar
+o comando "pip install Pillow" para instalar
+
+56
+00:02:39,391 --> 00:02:40,777
+o comando "pip install Pillow" para instalar
+o Pillow,
+
+57
+00:02:40,777 --> 00:02:43,462
+o Pillow,
+ele será o responsável pelo gerenciamento
+
+58
+00:02:43,462 --> 00:02:45,316
+ele será o responsável pelo gerenciamento
+da pasta "media", quando criarmos
+
+59
+00:02:45,316 --> 00:02:48,465
+da pasta "media", quando criarmos
+um usuário para o site e fazer o envio
+
+60
+00:02:48,465 --> 00:02:51,305
+um usuário para o site e fazer o envio
+dos portfólios, o usuário vai ter a capacidade
+
+61
+00:02:51,305 --> 00:02:54,455
+dos portfólios, o usuário vai ter a capacidade
+de enviar as imagem dos projetos e
+
+62
+00:02:54,455 --> 00:02:56,271
+de enviar as imagem dos projetos e
+definir uma imagem de perfil.
+
+63
+00:02:56,271 --> 00:02:58,789
+definir uma imagem de perfil.
+Instalação do Django foi concluída,
+
+64
+00:02:58,789 --> 00:03:00,854
+Instalação do Django foi concluída,
+vamos instalar o Pillow.
+
+65
+00:03:00,854 --> 00:03:05,897
+vamos instalar o Pillow.
+Em seguida, copie o comando
+
+66
+00:03:05,897 --> 00:03:07,212
+Em seguida, copie o comando
+"python manage.py migrate", para criar o
+
+67
+00:03:07,212 --> 00:03:11,094
+"python manage.py migrate", para criar o
+arquivo de banco de dados do SQLite,
+
+68
+00:03:11,094 --> 00:03:16,128
+arquivo de banco de dados do SQLite,
+essa aplicação utiliza o SQLite para o
+
+69
+00:03:16,128 --> 00:03:19,071
+essa aplicação utiliza o SQLite para o
+registro e criação dos usuários.
+
+70
+00:03:19,071 --> 00:03:21,589
+registro e criação dos usuários.
+Quando o executar, o esperado é que tudo
+
+71
+00:03:21,589 --> 00:03:25,783
+Quando o executar, o esperado é que tudo
+esteja "OK", e enfim, realizar o comando
+
+72
+00:03:25,783 --> 00:03:29,574
+esteja "OK", e enfim, realizar o comando
+"python manage.py runserver" no terminal.
+
+73
+00:03:31,307 --> 00:03:32,541
+Realizada.
+
+74
+00:03:34,214 --> 00:03:37,353
+Control + "click" para abrir a URL do
+
+75
+00:03:37,353 --> 00:03:39,501
+Control + "click" para abrir a URL do
+terminal.
+
+76
+00:03:39,501 --> 00:03:42,428
+terminal.
+Aqui está o Mosaicam.
+
+77
+00:03:42,428 --> 00:03:46,762
+Aqui está o Mosaicam.
+Os hyperlinks para login, cadastro e
+
+78
+00:03:46,762 --> 00:03:48,989
+Os hyperlinks para login, cadastro e
+sobre a equipe.
+
+79
+00:03:51,144 --> 00:03:54,092
+Projeto realizado pela Wânia Oliveira,
+
+80
+00:03:54,092 --> 00:03:55,937
+Projeto realizado pela Wânia Oliveira,
+Sabrina Cristina e eu.
+
+81
+00:03:55,937 --> 00:03:57,995
+Sabrina Cristina e eu.
+Aqui tem os links para o GitHub e o
+
+82
+00:03:57,995 --> 00:04:00,201
+Aqui tem os links para o GitHub e o
+LinkedIn de cada um.
+
+83
+00:04:00,201 --> 00:04:03,266
+LinkedIn de cada um.
+E agora, você pode testar o projeto!
+
+84
+00:04:03,266 --> 00:04:08,224
+E agora, você pode testar o projeto!
+Realizando cadastro com usuário e senha
+
+85
+00:04:08,224 --> 00:04:09,402
+Realizando cadastro com usuário e senha
+para logar.

@@ -1,0 +1,318 @@
+1
+00:00:00,000 --> 00:00:01,272
+Olá devs!
+
+2
+00:00:01,272 --> 00:00:02,863
+Olá devs!
+Meu nome é Marcelo de Souza,
+
+3
+00:00:02,863 --> 00:00:04,700
+Meu nome é Marcelo de Souza,
+um dos desenvolvedores responsáveis
+
+4
+00:00:04,700 --> 00:00:06,833
+um dos desenvolvedores responsáveis
+pela aplicação web "Mosaicam".
+
+5
+00:00:06,833 --> 00:00:08,986
+pela aplicação web "Mosaicam".
+O objetivo principal desse projeto foi
+
+6
+00:00:08,986 --> 00:00:10,694
+O objetivo principal desse projeto foi
+criar uma aplicação web com
+
+7
+00:00:10,694 --> 00:00:12,092
+criar uma aplicação web com
+CRUD funcional.
+
+8
+00:00:12,092 --> 00:00:14,949
+CRUD funcional.
+Permitindo que você (usuário) realize
+
+9
+00:00:14,949 --> 00:00:16,894
+Permitindo que você (usuário) realize
+as 4 operações básicas para o
+
+10
+00:00:16,894 --> 00:00:18,633
+as 4 operações básicas para o
+desenvolvimento de uma aplicação.
+
+11
+00:00:18,633 --> 00:00:20,626
+desenvolvimento de uma aplicação.
+Para fazer o projeto, foram utililizados
+
+12
+00:00:20,626 --> 00:00:23,259
+Para fazer o projeto, foram utililizados
+a linguagem de marcação "HTML",
+
+13
+00:00:23,259 --> 00:00:25,426
+a linguagem de marcação "HTML",
+linguagem de estilo "CSS",
+
+14
+00:00:25,426 --> 00:00:27,809
+linguagem de estilo "CSS",
+framework web "Django"
+
+15
+00:00:27,809 --> 00:00:30,208
+framework web "Django"
+e um dos forks da biblioteca "PIL"
+
+16
+00:00:30,208 --> 00:00:32,471
+e um dos forks da biblioteca "PIL"
+chamada "Pillow" para a manipulação
+
+17
+00:00:32,471 --> 00:00:33,436
+chamada "Pillow" para a manipulação
+das imagens.
+
+18
+00:00:33,436 --> 00:00:34,712
+das imagens.
+Foram implementadas diferentes
+
+19
+00:00:34,712 --> 00:00:36,662
+Foram implementadas diferentes
+funcionalidades, como a realização
+
+20
+00:00:36,662 --> 00:00:38,833
+funcionalidades, como a realização
+de cadastro e login de usuário.
+
+21
+00:00:38,833 --> 00:00:42,971
+de cadastro e login de usuário.
+Cadastrando usuários com um nome
+
+22
+00:00:42,971 --> 00:00:45,110
+Cadastrando usuários com um nome
+e uma senha definida
+
+23
+00:00:45,110 --> 00:00:46,860
+e uma senha definida
+para realizar o login.
+
+24
+00:00:46,860 --> 00:00:48,043
+para realizar o login.
+Feedbacks também foram
+
+25
+00:00:48,043 --> 00:00:49,148
+Feedbacks também foram
+implementados.
+
+26
+00:00:49,148 --> 00:00:52,063
+implementados.
+A realização de login do usuário
+
+27
+00:00:52,063 --> 00:00:54,682
+A realização de login do usuário
+e a criação do seu perfil.
+
+28
+00:00:54,682 --> 00:00:57,627
+e a criação do seu perfil.
+O usuário pode editar o perfil,
+
+29
+00:00:57,627 --> 00:01:00,407
+O usuário pode editar o perfil,
+alterando seu nome, inserindo uma bio,
+
+30
+00:01:00,407 --> 00:01:02,838
+alterando seu nome, inserindo uma bio,
+suas habilidades, link para LinkedIn ou
+
+31
+00:01:02,838 --> 00:01:04,766
+suas habilidades, link para LinkedIn ou
+GitHub e escolher uma foto.
+
+32
+00:01:04,766 --> 00:01:07,552
+GitHub e escolher uma foto.
+O usuário também pode realizar o envio
+
+33
+00:01:07,552 --> 00:01:10,201
+O usuário também pode realizar o envio
+do seu projeto ao clicar em "Novo Projeto".
+
+34
+00:01:10,201 --> 00:01:12,684
+do seu projeto ao clicar em "Novo Projeto".
+Definindo um título e descrição,
+
+35
+00:01:12,684 --> 00:01:14,311
+Definindo um título e descrição,
+ambos são obrigatórios.
+
+36
+00:01:14,311 --> 00:01:15,952
+ambos são obrigatórios.
+Selecionar uma imagem do projeto e
+
+37
+00:01:15,952 --> 00:01:17,429
+Selecionar uma imagem do projeto e
+um link para o projeto,
+
+38
+00:01:17,429 --> 00:01:19,947
+um link para o projeto,
+para depois, clicar em "Salvar" e
+
+39
+00:01:19,947 --> 00:01:21,204
+para depois, clicar em "Salvar" e
+realizar o envio dele.
+
+40
+00:01:21,204 --> 00:01:23,988
+realizar o envio dele.
+Ao realizar o envio, o projeto é mostrado
+
+41
+00:01:23,988 --> 00:01:26,983
+Ao realizar o envio, o projeto é mostrado
+na página do Mosaicam, onde você
+
+42
+00:01:26,983 --> 00:01:29,397
+na página do Mosaicam, onde você
+pode abrir em "Detalhes" e analisar
+
+43
+00:01:29,397 --> 00:01:32,250
+pode abrir em "Detalhes" e analisar
+de forma mais nítida esse projeto.
+
+44
+00:01:32,250 --> 00:01:34,765
+de forma mais nítida esse projeto.
+Caso você seja o proprietário do projeto,
+
+45
+00:01:34,765 --> 00:01:36,791
+Caso você seja o proprietário do projeto,
+você pode editar o projeto,
+
+46
+00:01:36,791 --> 00:01:39,496
+você pode editar o projeto,
+escolher outra imagem ou limpar
+
+47
+00:01:39,496 --> 00:01:41,751
+escolher outra imagem ou limpar
+a imagem e alterar os textos,
+
+48
+00:01:41,751 --> 00:01:44,705
+a imagem e alterar os textos,
+ou você pode escolher excluir o projeto
+
+49
+00:01:44,705 --> 00:01:46,392
+ou você pode escolher excluir o projeto
+e ele deixará de aparecer na página
+
+50
+00:01:46,392 --> 00:01:47,331
+e ele deixará de aparecer na página
+principal.
+
+51
+00:01:47,331 --> 00:01:51,396
+principal.
+Caso você tente pegar a URL de edição
+
+52
+00:01:51,396 --> 00:01:53,498
+Caso você tente pegar a URL de edição
+ou exclusão do seu projeto e
+
+53
+00:01:53,498 --> 00:01:55,104
+ou exclusão do seu projeto e
+tentar acessar com outro usuário,
+
+54
+00:01:55,104 --> 00:01:56,778
+tentar acessar com outro usuário,
+esse usuário não terá permissão para
+
+55
+00:01:56,778 --> 00:02:00,153
+esse usuário não terá permissão para
+editar ou excluir seu projeto.
+
+56
+00:02:00,153 --> 00:02:01,259
+editar ou excluir seu projeto.
+Obrigado por ter assistido a
+
+57
+00:02:01,259 --> 00:02:03,050
+Obrigado por ter assistido a
+apresentação do nosso projeto.
+
+58
+00:02:03,050 --> 00:02:04,841
+apresentação do nosso projeto.
+O vídeo de tutorial para a execução
+
+59
+00:02:04,841 --> 00:02:06,627
+O vídeo de tutorial para a execução
+do projeto Mosaicam pode ser
+
+60
+00:02:06,627 --> 00:02:08,977
+do projeto Mosaicam pode ser
+encontrado em meu repositório e também
+
+61
+00:02:08,977 --> 00:02:11,108
+encontrado em meu repositório e também
+nos repositórios das outras
+
+62
+00:02:11,108 --> 00:02:12,585
+nos repositórios das outras
+integrantes do grupo,
+
+63
+00:02:12,585 --> 00:02:14,850
+integrantes do grupo,
+onde você poderá baixar o repositório
+
+64
+00:02:14,850 --> 00:02:16,876
+onde você poderá baixar o repositório
+e experimentar nossa aplicação web.
